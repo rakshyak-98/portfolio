@@ -1,0 +1,238 @@
+:root {
+    --primary: #dc3635;
+    --primary--light: #ffecec;
+    --black: #493C3B;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+main {
+    margin: auto;
+    position: relative;
+}
+main header {
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+    top: 40px;
+}
+nav a,
+button a,
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color .3s ease-in;
+}
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+nav li {
+    list-style: none;
+}
+nav a:hover {
+    color: var(--primary);
+}
+main header a {
+    color: white;
+}
+main header button {
+    margin-left: 20px;
+}
+#btn--bg-red {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+#btn--bg-white {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+}
+#btn--black{
+    background-color: var(--black);
+    border: none;
+    padding: 10px;
+    color: white;
+}
+#btn--testimonial{
+    cursor: pointer;
+    background-color: white;
+    color: #000;
+    border-radius: 100%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#btn--testimonial:hover{
+    background-color: var(--primary--light);
+}
+#h1 {
+    font-size: 3vw;
+}
+#h2 {
+    font-size: 2vw;
+}
+#h3 {
+    font-size: 1vw;
+}
+#home {
+    height: 100vh;
+    background-image: url("assets/main-bg-image.jpg");
+    position: relative;
+    z-index: -9;
+}
+#home #main__text {
+    color: white;
+    position: absolute;
+    top: 50%;
+    max-width: 600px;
+    transform: translateY(-50%);
+    left: 10%;
+}
+#home #main__text h1 {
+    font-size: 3vw;
+}
+#home #main__text p {
+    margin-block: 40px;
+}
+#about-me {
+    max-width: 1200px;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+#about-me #texts {
+    align-self: center;
+}
+#services > h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+#services > p {
+    text-align: center;
+    margin-bottom: 40px;
+}
+#services #service__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+#services #service__list #service__card {
+    background-color: var(--primary--light);
+    max-width: calc(100% / 4);
+    padding: 40px;
+}
+#service__card > h2 {
+    margin-bottom: 20px;
+}
+#projects > h1,
+#projects > p,
+#testimonials > h1,
+#testimonials > p,
+#contact > h1,
+#contact > p
+{
+    text-align: center;
+    margin-bottom: 20px;
+}
+#projects #project__category-options {
+    margin-top: 60px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+#project__category-options > * {
+    background-color: var(--primary--light);
+    padding: 10px 20px;
+    transition: background-color 0.3s ease-in, color 0.2s ease-out;
+}
+#project__category-options > *:hover {
+    color: white;
+    background-color: var(--primary);
+}
+#project__showcase {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+#testimonials{
+    background-color: var(--primary);
+    color: white;
+}
+#testimonials #carousel__slider{
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    justify-content: center;
+}
+#testimonials #testimonial{
+    margin-top: 60px;
+    max-width: 300px; 
+    border: 1px solid black;
+    position: relative;
+    height: 300px;
+}
+#testimonial img{
+    position: absolute;
+    top: -50%;
+    transform: translate(-50%, 50%);
+    left: 50%;
+}
+#testimonial p{
+    text-align: center;
+    margin-top: 100px;
+    text-overflow: ellipsis;
+    height: 190px;
+    overflow: scroll;
+}
+#contact{
+    background-color: var(--primary);
+    color: white;
+    padding: 40px 0;
+}
+#contact p{
+    margin-bottom: 60px;
+}
+#contact #input__group{
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+}
+#contact #input__group input{
+    font-size: inherit;
+    border: none;
+    padding: 20px;
+    width: 100%;
+}
+#contact #input__group button{
+ font-size: inherit;
+ flex-shrink: 0;
+}
+
+footer{
+    height: 300px;
+    background-color: var(--primary--light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
