@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
     --color-red: #DC3635;
     --color-white: #FFFFFF;
@@ -14,7 +16,7 @@
 }
 
 html {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Montserrat', 'Courier New', Courier, monospace;
 }
 
 a {
@@ -25,33 +27,20 @@ a {
 main {
     background-color: var(--color-black);
     padding: 20px;
-    color: var(--color-white);
+    color: var(--color-cream);
     background-image: url("./assets/samuel-scalzo-xyuYk9oLA8I-unsplash.jpg");
     background-size: contain;
     background-repeat: no-repeat;
 }
 
-[name="creator"] {
-    font-size: 28px;
-    color: inherit;
-}
-
-[name="creator"]::first-letter {
-    color: var(--color-red);
-}
-
-h2[name^="heading"] {
-    font-size: 96px;
-
-}
-
-nav {
-    font-size: 20px;
+h2 {
+    font-size: 55px;
 }
 
 nav ul {
     display: flex;
     gap: 2rem;
+    font-size: 24px;
 }
 
 li {
@@ -59,29 +48,82 @@ li {
     color: var(--color-white);
 }
 
+p {
+    text-align: justify;
+}
+
+input,
+button,
+a {
+    font-size: inherit;
+    font-family: inherit;
+}
+
 input[name="email"] {
     width: 600px;
-    padding: 10px 20px;
+    padding: 12px;
+    color: var(--color-black);
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+section [name*="description"] {
+    font-size: 24px;
+    text-align: center;
 }
 
 /* class */
 
+.text-size--medium {
+    font-size: 32px;
+}
+
 .btn {
+    display: inline-block;
+    width: 189px;
+    text-align: center;
+    font-size: 21px;
+    font-weight: 500;
     background-color: var(--color-red);
-    padding: 10px 20px;
+    padding: 16px;
     color: var(--color-white);
     border: none;
+    border-radius: 2px;
+}
+
+.btn--light {
+    background-color: var(--color-cream);
+    color: var(--color-black);
+}
+
+.btn--flat {
+    border-radius: 0;
+}
+
+header,
+main>section {
+    max-width: 1400px;
+    margin-inline: auto;
 }
 
 header {
+    margin-top: 2.8rem;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2rem;
+    margin-inline: auto;
 }
 
 header [name="creator"] {
-    flex-basis: 200px;
+    flex-grow: 1;
+    font-size: 28px;
+    font-size: 38px;
+}
+
+header [name="creator"]::first-letter {
+    color: var(--color-red);
+    font-weight: bolder;
 }
 
 header li a {
@@ -90,65 +132,59 @@ header li a {
     white-space: nowrap;
 }
 
-header [name="download-resume"] {
-    border-radius: 0;
-    background-color: var(--color-red);
-    color: var(--color-white);
-}
-
 /* styling sections */
 
-section {
-    margin-inline: auto;
-}
-
 section[name="hero"] {
-    height: 100vh;
+    margin-top: 14rem;
     display: flex;
     align-items: center;
     background-size: cover;
+    margin-bottom: 26vh;
 }
 
 section[name="hero_intro"] {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    max-width: 85ch;
 }
 
 section[name="hero_intro"] [name="creator"] {
     font-size: 96px;
-    font-weight: 400;
+    font-weight: 500;
+    color: var(--color-red);
 }
 
 section[name="hero_intro"] [name="occupation"] {
     font-size: 48px;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 2rem;
 }
 
 section[name="hero_intro"] [name^="link"] {
     align-self: start;
 }
 
+section[name="hero_intro"] [name^="link"]:not(:first-child) {
+    margin-left: 30px;
+}
+
 section[name="hero_intro"] [name="creator-description"] {
     font-size: 20px;
-    max-width: 100ch;
-    margin-bottom: 2rem;
+    margin-bottom: 3.2rem;
+    text-align: justify;
+    line-height: 1.5;
 }
 
 section[name="about-me"] {
-    height: 100vh;
     display: flex;
     align-items: center;
-}
-
-section[name="about-me"] p[name^="about-creator"] {
-    font-size: 28px;
+    margin-bottom: 10vh;
 }
 
 section[name="services"] {
     max-width: 1400px;
-    height: 100vh;
     display: grid;
     place-content: center;
+    margin-bottom: 14vh;
 }
 
 section[name="services"] [name="service_list"] {
@@ -160,10 +196,6 @@ section[name="services"]> :first-child {
     text-align: center;
 }
 
-section[name="services"] [name="service-description"] {
-    max-width: 108ch;
-    margin-inline: auto;
-}
 
 section[name="service-catalog"] {
     margin-top: 5rem;
@@ -210,16 +242,34 @@ section[name="social-network"] {
 }
 
 section[name="social-network"] [name="heading-3"] {
-    font-size: 42px;
     margin-bottom: 3rem;
 }
 
-section[name="social-links"]{
+section[name="contact"] [name="heading-3"]::first-letter{
+    color: var(--color-red);
+}
+
+section[name="social-links"] {
     margin-top: 4rem;
 
 }
 
-footer{
+section[name="projects"]{
+    height: 80vh;
+}
+
+section[name="projects"] [name="projects-catalog-description"] {
+    text-align: center;
+    max-width: 100ch;
+    margin-inline: auto;
+}
+
+section[name="projects"] [name="heading-2"] {
+    text-align: center;
+}
+
+
+footer {
     background-color: var(--color-red);
-    height: 80px;
+    height: 100px;
 }
