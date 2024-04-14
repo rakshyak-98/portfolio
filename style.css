@@ -1,0 +1,225 @@
+:root {
+    --color-red: #DC3635;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --color-cream: #FFECEC;
+}
+
+/* global properties */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+main {
+    background-color: var(--color-black);
+    padding: 20px;
+    color: var(--color-white);
+    background-image: url("./assets/samuel-scalzo-xyuYk9oLA8I-unsplash.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+[name="creator"] {
+    font-size: 28px;
+    color: inherit;
+}
+
+[name="creator"]::first-letter {
+    color: var(--color-red);
+}
+
+h2[name^="heading"] {
+    font-size: 96px;
+
+}
+
+nav {
+    font-size: 20px;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+}
+
+li {
+    list-style: none;
+    color: var(--color-white);
+}
+
+input[name="email"] {
+    width: 600px;
+    padding: 10px 20px;
+}
+
+/* class */
+
+.btn {
+    background-color: var(--color-red);
+    padding: 10px 20px;
+    color: var(--color-white);
+    border: none;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+header [name="creator"] {
+    flex-basis: 200px;
+}
+
+header li a {
+    text-decoration: none;
+    color: inherit;
+    white-space: nowrap;
+}
+
+header [name="download-resume"] {
+    border-radius: 0;
+    background-color: var(--color-red);
+    color: var(--color-white);
+}
+
+/* styling sections */
+
+section {
+    margin-inline: auto;
+}
+
+section[name="hero"] {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+}
+
+section[name="hero_intro"] {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section[name="hero_intro"] [name="creator"] {
+    font-size: 96px;
+    font-weight: 400;
+}
+
+section[name="hero_intro"] [name="occupation"] {
+    font-size: 48px;
+}
+
+section[name="hero_intro"] [name^="link"] {
+    align-self: start;
+}
+
+section[name="hero_intro"] [name="creator-description"] {
+    font-size: 20px;
+    max-width: 100ch;
+    margin-bottom: 2rem;
+}
+
+section[name="about-me"] {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+section[name="about-me"] p[name^="about-creator"] {
+    font-size: 28px;
+}
+
+section[name="services"] {
+    max-width: 1400px;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+section[name="services"] [name="service_list"] {
+    display: flex;
+    gap: 20px;
+}
+
+section[name="services"]> :first-child {
+    text-align: center;
+}
+
+section[name="services"] [name="service-description"] {
+    max-width: 108ch;
+    margin-inline: auto;
+}
+
+section[name="service-catalog"] {
+    margin-top: 5rem;
+    --gap: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 60px 20px;
+}
+
+article[name="card"] {
+    border-radius: 10px;
+    padding: 20px;
+    background-color: var(--color-cream);
+    color: var(--color-black);
+    flex-basis: calc((100% / 3) - var(--gap));
+}
+
+article[name="card"] h3[name="catalog-heading"] {
+    font-size: 28px;
+    margin-block: 1em;
+}
+
+article[name="card"] [name="catalog-description"] {
+    font-size: 16px;
+}
+
+section[name="contact"] h2[name="heading-2"] {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+section[name="contact"] section[name="action"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+section[name="social-network"] {
+    margin-block: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section[name="social-network"] [name="heading-3"] {
+    font-size: 42px;
+    margin-bottom: 3rem;
+}
+
+section[name="social-links"]{
+    margin-top: 4rem;
+
+}
+
+footer{
+    background-color: var(--color-red);
+    height: 80px;
+}
